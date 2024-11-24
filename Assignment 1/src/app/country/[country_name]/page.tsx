@@ -1,8 +1,8 @@
 import "@/app/globals.css";
 import Link from "next/link";
 
-export default function CountryName({ params }: any) {
-    let countries = [
+export default function CountryName({ params }) {
+    const countries = [
         {
           name: "Pakistan",
           population: 216.6, // Updated in millions
@@ -31,13 +31,13 @@ export default function CountryName({ params }: any) {
       ];
       
 
-  function findCountry(name: string): any {
+  function findCountry(name: string) {
     return countries.find(
       (country) => name.toLowerCase() === country.name.toLowerCase()
     );
   }
 
-  let result = findCountry(params.country_name);
+  const result = findCountry(params.country_name);
 
   return (
     <div className=" min-h-screen bg-gradient-to-r from-gray-50 via-blue-50 to-gray-200 p-8 text-gray-800">
